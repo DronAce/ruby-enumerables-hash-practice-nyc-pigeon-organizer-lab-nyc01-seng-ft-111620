@@ -3,7 +3,7 @@ def nyc_pigeon_organizer(data)
   names = []
   hash = {}
   data.map do |k1,kv|
-      kv.find do |k, v|
+      kv.each do |k, v|
           names << v
       end
   end
