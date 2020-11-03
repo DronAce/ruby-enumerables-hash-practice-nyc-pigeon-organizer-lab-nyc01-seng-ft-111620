@@ -10,7 +10,6 @@ def nyc_pigeon_organizer(data)
   names.flatten!
   names  = names.uniq
   names.each do |x|
-      x = x.to_sym
       hash[x] = {}
   end
   return hash
