@@ -5,6 +5,7 @@ end
 
 def getNames(data) {
 names = []
+hash = {}
 data.map do |k1,kv|
     kv.find do |k, v|
         names << v
