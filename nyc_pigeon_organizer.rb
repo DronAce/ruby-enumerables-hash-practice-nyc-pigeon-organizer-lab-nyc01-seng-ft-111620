@@ -1,23 +1,19 @@
 def nyc_pigeon_organizer(data)
   # write your code here!
-  names = []
-  color = []
   hash = {}
   data.map do |k1,kv|
-    color << k1
     kv.each do |k, v|
-      v.map do |x|
-        if names.include?(x) == false
-          names << x
+     v.map do |x|
+         hash[x] = {}
+         pigeon_data.map do |k1,kv|
+           hash[x][k1] = []
+           kv.each do |k, v|
+             if v.include?(x)
+               hash[x][k1] = k
+             end
+           end
         end
       end
-    end
-  end
-
-  names.each do |x|
-    hash[x] = {}
-    color.each do |v|
-      hash[x][v] = []
     end
   end
   return hash
