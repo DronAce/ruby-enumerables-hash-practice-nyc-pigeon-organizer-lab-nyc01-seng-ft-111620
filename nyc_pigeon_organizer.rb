@@ -9,7 +9,7 @@ def nyc_pigeon_organizer(data)
            hash[x][k1] = []
            kv.each do |k, v|
              if v.include?(x)
-               hash[x][k1] = k
+               hash[x][k1] << k.to_s
              end
            end
         end
