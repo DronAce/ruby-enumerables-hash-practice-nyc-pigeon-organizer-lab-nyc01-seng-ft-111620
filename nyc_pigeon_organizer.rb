@@ -5,7 +5,7 @@ def nyc_pigeon_organizer(data)
     kv.each do |k, v|
      v.map do |x|
          hash[x] = {}
-         pigeon_data.map do |k1,kv|
+         data.map do |k1,kv|
            hash[x][k1] = []
            kv.each do |k, v|
              if v.include?(x)
