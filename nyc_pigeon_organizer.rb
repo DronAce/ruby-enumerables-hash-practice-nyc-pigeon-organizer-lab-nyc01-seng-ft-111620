@@ -3,16 +3,10 @@ def nyc_pigeon_organizer(data)
   hash = {}
   data.map do |k1,kv|
     kv.each do |k, v|
-     v.map do |x|
-         hash[x] = {}
-         data.map do |k1,kv|
-           hash[x][k1] = []
-           kv.each do |k, v|
-             if v.include?(x)
-               hash[x][k1] << k.to_s
-             end
-           end
-        end
+      v.map do |x|
+        hash[x] ||= {}
+        hash[x][k1] = []
+        hash[x][k1] << k.to_s
       end
     end
   end
